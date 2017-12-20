@@ -1,0 +1,32 @@
+{
+  "name": "vicente-jose-hernandez-garcia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.toptal.com:Vicente-Jose-Hernandez-Garcia/vicente-jose-hernandez-garcia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "auto-bind": "^1.1.0",
+    "body-parser": "^1.17.1",
+    "debug": "^2.6.6",
+    "express": "latest",
+    "express-validator": "^3.2.0",
+    "extend-error": "0.0.2",
+    "http-status-codes": "^1.1.6",
+    "jsonwebtoken": "^7.4.0",
+    "mongoose": "^4.9.8",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "latest",
+    "passport-strategy": "latest",
+    "should": "^11.2.1",
+    "validator": "^7.0.0"
+  }
+}

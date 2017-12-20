@@ -3,14 +3,15 @@
     <div class="header">              
             
               <div class="mars">
-                <div class="planet"><div class="shadow"></div></div>
+                <div class="planet"> </div>
               </div>
+
             
             
     header
     </div>
     <div class="container">
-      container
+ 
       <router-view/>
     </div>
     <div class="footer">
@@ -40,50 +41,42 @@ export default {
 
 
  
-@keyframes orbitmars {
-  0% { z-index:5; transform: rotateY(0); }
-  49% { z-index:5; }
-  50% { z-index:-5; }
-  99% { z-index:-5; }
-  100%   { z-index:5; transform: rotateY(360deg); }
+@keyframes orbitmars   { 
+  from { margin-left: 0%;  }
+  to {margin-left: 20% ;} 
 }
-/* Keep planet image flat */
-@keyframes anti-spin {
-  from { transform: rotateY(0); }
-  to   { transform: rotateY(-360deg); }
-}
+ 
  
 
 
- 
-.shadow {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  background: transparent url(http://www.waynedunkley.com/img/solar_system/shadow.png) 0% 0% no-repeat;
-  background-size: cover;
-  border-radius: 100%;
-}
+
 
 
 .mars {
   position: absolute;
-  width: 100%;
+  width: 35%;
   z-index:5;
-  animation: orbitmars 30s infinite linear;
-  top: -11px;
+  animation-delay: 2s;
+  animation: orbitmars 1s infinite linear;
+
+  top: 1px;
 }
-.mars .planet {
-  width:22px;
-  height:22px;
-  background-color: red;
-  animation: anti-spin 30s infinite linear;
-}
-.mars .shadow {
-  animation: shadow 30s infinite linear;
-}
+
+.planet {
+
+  content: '';
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 25px;
+    height: 1px;
+   background: -moz-linear-gradient(left,rgba(255,255,255,0) 0%,#ffffff 75%,#ffffff 100%);
+     background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0%,#ffffff 75%,#ffffff 100%);
+  /*  background: linear-gradient(le bottom,rgba(255,255,255,0) 0%,#ffffff 75%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff',endColorstr='#ffffff',GradientType=0);*/
+ }
+
 
 
 
