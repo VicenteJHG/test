@@ -10,6 +10,7 @@ class AuthController extends BaseController {
 
     // Request token by credentials
     create(req, res, next) {
+        console.log("inside");
         let responseManager = this._responseManager;
         this.authenticate(req, res, next, (user) => {
             let response =  {

@@ -1,6 +1,9 @@
 const ResponseManager = require(MANAGER_PATH + 'response');
 const BaseAutoBindedClass = require(BASE_PACKAGE_PATH + 'base-autobind');
 
+const axios = require('axios');
+
+
 class BaseController extends BaseAutoBindedClass {
     constructor() {
         super();
@@ -35,5 +38,21 @@ class BaseController extends BaseAutoBindedClass {
             }
         })(req, res, next);
     }
+
+
+
+
+ performRequest(endpoint, method, data, success) {
+    axios.defaults.headers.common['X-Riot-Token'] = "RGAPI-65dba0bc-69c4-4bea-b88a-31b41681fef3";
+    console.log("inside here");
+    axios.get('https://euw1.api.riotgames.com/lol/static-data/v3/champions?locale=en_US&dataById=true')
+        .then((response)=>{ console.log(response)})
+        .catch((err) => console.log(err));
+
+
+}
+
+
+
 }
 module.exports = BaseController;
